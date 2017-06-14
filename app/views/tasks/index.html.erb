@@ -6,7 +6,6 @@
 <table class="table table-striped" >
  <thead>
   <tr>
-   <th>id</th>
    <th>タイトル</th>
    <th>タスク</th>
   </tr>   
@@ -15,9 +14,9 @@
  <tbody>
   <% @tasks.each do |task| %>
    <tr>
-    <td><%= link_to task.id, task %></td>
     <td><%= task.title %></td>
     <td><%= task.content %></td>
+    <td><%= link_to "詳細", task_path(task) %></td>
    </tr>
   <% end %>
  </tbody>
